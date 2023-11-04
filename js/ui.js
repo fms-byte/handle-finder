@@ -45,7 +45,7 @@ class UI {
   showProfileCf(user) {
     console.log(user.status);
     this.clearAlert();
-    if(user.status == "FAILED") {
+    if(user.status == "FAILED" || user.result[0].handle == undefined ) {
         this.cfProfile.innerHTML = `
                 <h3>User not found on CodeForces</h3>
                 <div class="card card-body mb-3">Oops!</div>
